@@ -1,32 +1,27 @@
 # ATS
 
-> Applicant Tracking System (ATS) web application
+> A Flask prototype for comparing a resume with a job description.
 
-Built with HTML and focused on ats, hr, html, javascript.
+## Overview
 
-## About this project
+The app accepts a resume and job description, extracts and analyzes text, and returns scoring and feedback intended to help users inspect resume alignment. Its implementation uses several NLP and document-processing libraries.
 
-This repository is part of **Neeraj Sai's** growing collection of software projects, experiments, and learning builds. It reflects a practical, curious approach to creating useful products and understanding how they work under the hood.
+## What’s in this repo
+
+- Resume text extraction from supported document formats
+- Keyword, section, readability, and matching analysis
+- Feedback and editing routes in a Flask interface
+
+## Stack
+
+Python, Flask, spaCy, NLTK, Transformers/PyTorch, PDF and DOCX tools, OCR, and FAISS.
 
 ## Getting started
 
-Clone the repository and follow the setup instructions for the project's framework or language:
+1. Create a dedicated Python environment. No pinned dependency file is present, and the app loads language models that may need to be installed or downloaded separately.
+2. Install the required NLP/document packages and the spaCy models referenced in `app.py`.
+3. Run `python app.py` after the models and runtime dependencies are available.
 
-```bash
-git clone https://github.com/neerajsait/ATS.git
-cd ATS
-```
+## Notes
 
-Check the project files for the available run commands and configuration requirements.
-
-## Links
-
-[Repository](https://github.com/neerajsait/ATS)
-
-## Author
-
-**Tiruveedhi Neeraj Venkata Sai**
-
-- GitHub: [@neerajsait](https://github.com/neerajsait)
-- Portfolio: [neeraj's portfolio](https://github.com/neerajsait/portfoliomain)
-
+Scores are heuristic guidance, not a hiring decision or a guarantee of ATS behavior. Model downloads can be large; review uploaded resumes carefully and avoid sending confidential documents to untrusted environments.
